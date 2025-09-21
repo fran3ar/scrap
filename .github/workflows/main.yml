@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:   # <-- permite correr manualmente
+  schedule:
+    - cron: "*/15 * * * *"   # corre cada 15 minutos
 
 jobs:
   scrape:
